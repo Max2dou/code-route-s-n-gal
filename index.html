@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code de la Route Sénégal - Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section Accueil -->
+        <section id="home" class="section active">
+            <div class="home-content">
+                <h1>🚗 Code de la Route</h1>
+                <h2>Sénégal</h2>
+                <p class="subtitle">Testez vos connaissances sur les règles de circulation</p>
+                <button class="btn btn-primary" onclick="startQuiz()">Commencer le Quiz</button>
+                <button class="btn btn-secondary" onclick="showAbout()">À propos</button>
+            </div>
+        </section>
+
+        <!-- Section Quiz -->
+        <section id="quiz" class="section">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <p class="question-counter">Question <span id="currentQuestion">1</span> sur <span id="totalQuestions">10</span></p>
+            </div>
+            
+            <div class="quiz-content">
+                <h3 id="questionText" class="question"></h3>
+                <div id="answersContainer" class="answers-container"></div>
+                <button id="nextBtn" class="btn btn-primary" onclick="nextQuestion()" disabled>Suivant</button>
+            </div>
+        </section>
+
+        <!-- Section Résultats -->
+        <section id="results" class="section">
+            <div class="results-content">
+                <h2>Résultats</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="scoreValue">0</span>%
+                    </div>
+                </div>
+                <p id="scoreText" class="score-text"></p>
+                <div id="resultsList" class="results-list"></div>
+                <button class="btn btn-primary" onclick="location.reload()">Recommencer</button>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section id="about" class="section">
+            <div class="about-content">
+                <h2>À propos</h2>
+                <p>Cette application est conçue pour vous aider à préparer l'examen du code de la route au Sénégal.</p>
+                <p>Testez vos connaissances sur les panneaux, les règles et les situations routières.</p>
+                <h3>Fonctionnalités</h3>
+                <ul>
+                    <li>✅ Quiz avec 10 questions</li>
+                    <li>✅ Explications détaillées</li>
+                    <li>✅ Score en pourcentage</li>
+                    <li>✅ Design moderne et responsive</li>
+                </ul>
+                <button class="btn btn-secondary" onclick="backHome()">Retour</button>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Code Route Sénégal. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
